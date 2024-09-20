@@ -1,0 +1,52 @@
+---
+const navItems = [
+  { titleEs: 'Sobre Mí', titleEn: 'About Me', href: '/' },
+  { 
+    titleEs: 'Proyectos', 
+    titleEn: 'Projects',
+    href: '/projects',
+    subitems: [
+      { titleEs: 'ML', titleEn: 'ML', href: '/projects/machine-learning' },
+      { titleEs: 'Integración de Apps RAG', titleEn: 'RAG Apps Integration', href: '/projects/rag-apps' },
+      { titleEs: 'Infraestructura Azure', titleEn: 'Azure Infrastructure', href: '/projects/azure' },
+      { titleEs: 'Ingeniería de Datos', titleEn: 'Data Engineering', href: '/projects/data-engineering' },
+      { titleEs: 'Productos Digitales', titleEn: 'Digital Products', href: '/projects/digital-products' },
+      { titleEs: 'LMS y SIS', titleEn: 'LMS and SIS', href: '/projects/lms-sis' },
+    ]
+  },
+  { titleEs: 'Experiencia Laboral', titleEn: 'Work Experience', href: '/work-experience' },
+];
+---
+
+<aside class="bg-orange-800 text-white w-64 min-h-screen p-4">
+  <nav>
+    <ul class="space-y-2">
+      {navItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="block py-2 px-4 rounded transition-colors hover:bg-orange-700"
+          >
+            <span data-lang="es">{item.titleEs}</span>
+            <span data-lang="en" class="hidden">{item.titleEn}</span>
+          </a>
+          {item.subitems && (
+            <ul class="ml-4 mt-2 space-y-1">
+              {item.subitems.map((subitem) => (
+                <li>
+                  <a
+                    href={subitem.href}
+                    class="block py-1 px-4 rounded text-sm transition-colors hover:bg-orange-700"
+                  >
+                    <span data-lang="es">{subitem.titleEs}</span>
+                    <span data-lang="en" class="hidden">{subitem.titleEn}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>
