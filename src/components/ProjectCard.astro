@@ -4,12 +4,13 @@ export interface Props {
   description: string;
   icon: string;
   href: string;
+  lang: string;
 }
 
-const { title, description, icon, href } = Astro.props;
+const { title, description, icon, href, lang } = Astro.props;
 ---
 
-<a href={href} class="block">
+<a href={href} class="block" data-lang={lang} >
   <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
     <div class="text-4xl mb-4">{icon}</div>
     <h3 class="text-xl font-semibold text-orange-900 mb-3">{title}</h3>
