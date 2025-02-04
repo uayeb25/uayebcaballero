@@ -3,13 +3,17 @@ import type { Skills } from '../interfaces/Interface'
 
 interface Props {
     name: string
+    name_en: string
     skills: Skills
 }
 
-const { name, skills } = Astro.props;
+const { name, name_en,skills } = Astro.props;
 ---
 <section id="skills" class="mb-12">
-    <h2 class="text-2xl font-bold mb-6">{name}</h2>
+
+    <h2 class="text-2xl font-bold mb-6" data-lang="es" >{name}</h2>
+    <h2 class="text-2xl font-bold mb-6" data-lang="en" >{name_en}</h2>
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
         {Object.entries(skills).map(([c, s]) => (
