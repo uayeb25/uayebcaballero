@@ -26,3 +26,13 @@ interface Skill {
 export interface Skills {
     [categoria: string]: Skill[];
 }
+
+export interface WorkExperienceItem {
+    title: string;
+    titleEN: string;
+    company: string;
+    period: string;
+    description: string[];
+    descriptionEN: string[];
+    technologies: string[];
+  }

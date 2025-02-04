@@ -1,4 +1,4 @@
-import type  { SocialProps, CardIndexProps, ItemProps, Skills } from '../../interfaces/Interface';
+import type  { SocialProps, CardIndexProps, ItemProps, Skills, WorkExperienceItem } from '../../interfaces/Interface';
 
 
 /** USED ON INDEX  */
@@ -57,6 +57,7 @@ export const skills: Skills = {
         { name: "SimPy", level: 75 },
         { name: "Azure Functions", level: 80 },
         { name: "Logic Apps", level: 80 },
+        { name: "Azure Platform", level: 70 },
     ],
     "Data Engineering": [
         { name: "SQL", level: 85 },
@@ -90,6 +91,12 @@ export const skills: Skills = {
       { name: "Lake House", level: 80 },
       { name: "Data Warehouse", level: 80 },
     ],
+    DevOps: [
+        { name: "Azure DevOps", level: 50 },
+        { name: "Docker", level: 60 },
+        { name: "Kubernetes", level: 50 },
+        { name: "Terraform", level: 60 },
+    ],
 }
 
 
@@ -111,5 +118,49 @@ export const navItems: ItemProps[] = [
         { titleEs: 'LMS y SIS', titleEn: 'LMS and SIS', href: '/projects/lms-sis' },
       ]
     },
-    { titleEs: 'Experiencia Laboral', titleEn: 'Work Experience', href: '/work-experience' },
+    { titleEs: 'Experiencia Laboral', titleEn: 'Work Experience', href: '/workexperience' },
+];
+
+/** WORK EXPERIENCE */
+
+export const experiences: WorkExperienceItem[] = [
+  {
+    title: "Lider Técnico de BI",
+    titleEN: "BI Team Lead",
+    company: "Edusoft",
+    period: "2023 - Presente",
+    description: [
+      "Gestionar las cargas de trabajo y los recursos del equipo de BI.",
+      "Cooperar en la implementación de la lakehouse.",
+      "Analizar e implementar la gobernanza de datos.",
+      "Desarrollar y mantener los pipelines de datos.",
+      "Analizar diferentes soluciones basadas en datos para entender los estilos de aprendizaje de los estudiantes.",
+    ],
+    descriptionEN: [
+      "Manage workloads and resources for the BI team.",
+      "Cooparete implementing the lakehouse.",
+      "Analyse and implement the data governance.",
+      "Develop and maintain the data pipelines.",
+      "Analyze different data-driven solutions to understand student learning styles.",
+    ],
+    technologies: ["Python", "Azure", "Databricks", "DataLake", "PySpark", "LlamaIndex"],
+  },{
+    title: "Arquitecto de datos",
+    titleEN: "Data Architect",
+    company: "Analytikus",
+    period: "2021 - 2023",
+    description: [
+      "Diseñar y mantener la arquitectura de datos en Azure.",
+      "Implementar Modelos estadisticos para predecir deserción estudiantil.",
+      "Implementar Modelos estadisticos para priorizar potenciales estudiantes a matricular.",
+      "Emplementar Bot para atender a los estudiantes mediante el uso de ChatGPT dentro Microsoft Teams.",
+    ],
+    descriptionEN: [
+      "Design and maintain the data architecture in Azure.",
+      "Implement statistical models to predict student dropout.",
+      "Implement statistical models to prioritize potential students to enroll.",
+      "Implement Bot to assist students using ChatGPT within Microsoft Teams.",
+    ],
+    technologies: ["Python", "Azure", "Databricks", "DataLake", "PySpark", "Synapse", "BotFramework", "MongoBD"],
+  }
 ];
