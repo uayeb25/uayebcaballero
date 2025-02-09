@@ -1,20 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import ProjectCard from '../components/ProjectCard.astro';
 
-interface Project {
-  slug: string;
-  data: {
-    title: string;
-    description: string;
-    title_en: string;
-    description_en: string;
-    icon: string;
-  };
-}
+type Project = CollectionEntry<'projects'> & { slug: string };
 
-const projects: Project[] = await getCollection('projects');
+const projects: Project[] = await getCollection('projects') as Project[];
 ---
 
 <Layout title="Projects - Uayeb Caballero">

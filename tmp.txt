@@ -1,0 +1,13 @@
+integrations: [
+    mdx({
+      remarkPlugins: [],
+      rehypePlugins: [],
+      extendDefaultPlugins: true,
+    })
+  ],
+  markdown: {
+    shikiConfig: {
+      theme: 'dracula',
+      wrap: true
+    },
+  },
