@@ -8,7 +8,10 @@ type Project = CollectionEntry<'projects'> & { slug: string };
 const projects: Project[] = await getCollection('projects') as Project[];
 ---
 
-<Layout title="Projects - Uayeb Caballero">
+<Layout 
+  title="Projects - Uayeb Caballero"
+  description="Proyectos de desarrollo, educación y tecnología de Uayeb Caballero"
+>
   <div class="max-w-4xl mx-auto mt-8">
 
     <h1 class="text-4xl font-bold text-orange-800 mb-6" data-lang="en" >Projects</h1>

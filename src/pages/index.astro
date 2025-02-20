@@ -10,7 +10,10 @@ import { Image } from 'astro:assets';
 import { socials, cards, skills } from '../content/data/db'
 ---
 
-<Layout title="Uayeb Caballero - IT Professional & EdTech Specialist">
+<Layout 
+  title="Uayeb Caballero - IT Professional & EdTech Specialist"
+  description="Conoce a Uayeb Caballero, profesional IT y especialista en EdTech, con experiencia en desarrollo, gestión de proyectos y herramientas educativas digitales."
+>
   <div class="max-w-3xl mx-auto">
     <div class="text-center mb-12">
       <Image
@@ -58,5 +61,18 @@ import { socials, cards, skills } from '../content/data/db'
     </div>
 
   </div>
+  <astro:head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Uayeb Caballero",
+        "jobTitle": "IT Professional & EdTech Specialist",
+        "description": "Profesionista en tecnología y especialista en herramientas educativas...",
+        "image": "https://uayebcaballero.dev/images/uayeb.jpeg",
+        "url": "https://uayebcaballero.dev/"
+      }
+    </script>
+  </astro:head>
 </Layout>
 
